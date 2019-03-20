@@ -47,7 +47,21 @@ class BST {
     }
   }
 
-  searchIter
+  searchIter(val, root=this.root) {
+    if (!root) return false;
+
+    let stack = [root];
+
+    while (stack.length) {
+      let node = stack.pop();
+      if (node.val === val) return true;
+
+      if (node.right) stack.push(node.right)
+      if (node.left) stack.push(node.left)
+    }
+
+    return false;
+  }
 }
 
 module.exports = {
