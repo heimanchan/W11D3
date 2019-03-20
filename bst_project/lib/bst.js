@@ -46,6 +46,8 @@ class BST {
       return true;
     }
   }
+
+  searchIter
 }
 
 module.exports = {
